@@ -8,7 +8,14 @@ A sample prompt: `data/gpt4-prompts-joint-amr-sparql-qald9-no-oracle_2023-10.jso
 
 Jupyter notebook: `src/gpt4-1106-amr-sparql-joint-parsing-prompts.ipynb` (works with above data sample)
 
-To get the main idea behind how we define **hallucination** and **hallucination detection** in our experiments, see line 22 in the prompt, or search for the key `sparql_allowed_relations`. This is the part of the prompt where we constrain the LLM to a small set of SPARQL relations; in our case, all relations observed in the QALD-9 training data (Perevalov et al, 2022) mapped to AMRs in a resource created by the amazing IBM team, QALD-9-AMR: 
+Sample output (GPT-4, Joint AMR-SPARQL generation): `data/example-predictions-gpt4-joint-amr-sparql-with-prompt`
+
+Sample output (Llama, Joint AMR-SPARQL generation): `data/example-predictions-llama-joint-amr-sparql`
+
+Sample MASSIVE-AMR data instances: `data/sample-data-massive-amr-train`
+
+
+To get the main idea behind how we define **hallucination** and **hallucination detection** in our experiments, see line 22 in the sample prompt, or search for the key `sparql_allowed_relations`. This is the part of the prompt where we constrain the LLM to a small set of SPARQL relations; in our case, all relations observed in the QALD-9 training data (Perevalov et al, 2022) mapped to AMRs in a resource created at IBM, QALD-9-AMR: 
 
 [https://github.com/IBM/AMR-annotations] 
 
