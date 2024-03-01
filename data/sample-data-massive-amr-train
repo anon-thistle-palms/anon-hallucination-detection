@@ -1,0 +1,49 @@
+::id 13613-hu-HU
+::en_utt what movies has [person : casey affleck] starred in
+::annot_utt milyen filmekben szerepelt [person : mészáros béla]
+::snt milyen filmekben szerepelt mészáros béla
+::en_translation in which films did mészáros béla star
+(s / star-01
+      :ARG1 (p / person :name (n / name :op1 "mészáros" :op2 "béla"))
+      :ARG2 (m / movie :plural +
+            :mod (a / amr-unknown)))
+
+::id 13613-bn-BD
+::en_utt what movies has [person : casey affleck] starred in
+::annot_utt [person : শাকিব খান] কোন সিনেমায় অভিনয় করেছেন
+::snt শাকিব খান কোন সিনেমায় অভিনয় করেছেন
+::en_translation in which movies has shakib khan acted
+(s / star-01
+      :ARG1 (p / person :name (n / name :op1 "শাকিব" :op2 "খান"))
+      :ARG2 (m / movie :plural +
+            :mod (a / amr-unknown)))
+
+::id 13613-ko-KR
+::en_utt what movies has [person : casey affleck] starred in
+::annot_utt [person : 조진웅] 은 어떤 영화에 나왔어
+::snt 조진웅 은 어떤 영화에 나왔어
+::en_translation what movies did cho jin-woong appear in
+(s / star-01
+      :ARG1 (p / person :name (n / name :op1 "조진웅"))
+      :ARG2 (m / movie :plural +
+            :mod (a / amr-unknown)))
+
+::id 13613-ta-IN
+::en_utt what movies has [person : casey affleck] starred in
+::annot_utt [person : ரோஜா] எந்தெந்த படங்களில் நடித்துள்ளார்
+::snt ரோஜா எந்தெந்த படங்களில் நடித்துள்ளார்
+::en_translation in which films has roja acted
+(s / star-01
+      :ARG1 (p / person :name (n / name :op1 "ரோஜா"))
+      :ARG2 (m / movie :plural +
+            :mod (a / amr-unknown)))
+
+::id 13613-vi-VN
+::en_utt what movies has [person : casey affleck] starred in
+::annot_utt những bộ phim nào có [person : trường giang] đóng vai chính
+::snt những bộ phim nào có trường giang đóng vai chính
+::en_translation which movies does truong giang have the main role
+(s / star-01
+      :ARG1 (p / person :name (n / name :op1 "trường" :op2 "giang"))
+      :ARG2 (m / movie :plural +
+            :mod (a / amr-unknown)))

@@ -1,0 +1,74 @@
+[
+    {
+        "text": "Convert:\nwhich artists were born on the same date as rachel stevens\n---\n",
+        "ref_amr": "(b / bear-02 :ARG1 (a / artist :mod (a2 / amr-unknown)) :time (d / date :ARG1-of (s / same-01 :ARG2 (d2 / date :time-of (b2 / bear-02 :ARG1 (p / person :name (n / name :op1 \"Rachel\" :op2 \"Stevens\")))))))",
+        "ref_sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> PREFIX dbr: <http://dbpedia.org/resource/> SELECT DISTINCT ?uri WHERE { ?uri a dbo:Artist . dbr:Rachel_Stevens dbo:birthDate ?birthdate . ?uri dbo:birthDate ?birthdate }",
+        "language": "en-US",
+        "src": "qald9",
+        "beam_transition_scores": [
+            "|  5550 | SP       | -16.940 | 0.00%",
+            "|  5550 | SP       | -16.940 | 0.00%",
+            "|  5550 | SP       | -16.940 | 0.00%",
+            "|  5550 | SP       | -16.940 | 0.00%",
+            "|  5550 | SP       | -16.940 | 0.00%"
+        ],
+        "hypotheses": [
+            {
+                "pred_label": "SPARQL",
+                "pred_output": "PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX  wd:<http:wik:data/> SELECT DISTINCT ?uri WHERE { ?type wikibase:quantityAmount 1 . ?x wkt:P569 ?start . wdd:Q115 wikt:Rachel_Stevens_ (d / ?date) . BIND(IF(?type = w:MusicalArtist,?x,IF(TYPE(?x)=w:Singer,w / FILTER(Y(?date,CONTAINS,BOUND(?start))))))))"
+            },
+            {
+                "pred_label": "SPARQL",
+                "pred_output": "PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX  wd:<http:wik:data/> SELECT DISTINCT ?uri WHERE { ?type wikibase:quantityAmount 1 . ?x wkt:P569 ?start . wdd:Q115 wikt:Rachel_Stevens_ (d / ?date) . BIND(IF(?type = w:MusicalArtist,?x,IF(TYPE(?x)=w:Singer,w / FILTER(Y(?date,CONTAINS,BOUND(?start)))))) AS ?val) }"
+            },
+            {
+                "pred_label": "SPARQL",
+                "pred_output": "PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX pq:<http:/wwwpq.com/property/> SELECT DISTINCT ?uri WHERE { wd:Q206997 p:birthDate ?date . ?type pv:P39 _:uri . } ORDER BY DESC(?date) OFFSET 0 LIMIT 1"
+            },
+            {
+                "pred_label": "SPARQL",
+                "pred_output": ""
+            },
+            {
+                "pred_label": "SPARQL",
+                "pred_output": "SELECT ?s1 WHERE { <http://www.wikidata.org/entity/Q11503>  < http:// www.w3. org/1998/01/rdf-schema#dateOfBirth> ?date . ?stevens s1 . }  UNION { ?x  a  ?type  {  wdt:P279* wd:Q4830453 .  } FILTER NOT EXISTS { wikibase:WikiLinkProperty ?link . wiktionary:Rachel_Stevens ?y . { SELECT DISTINCT ?uri WHERE  ( ?uris=?x )  AND (  FIRST(?uri) = ?name ) } } ?a s2  .}  ORDER BY DESC(?date) OFFSET 0 LIMIT 1"
+            }
+        ]
+    },
+    {
+        "text": "Convert:\nqué artistas nacieron en la misma fecha que rachel stevens?\n---\n",
+        "ref_amr": "(b / bear-02 :ARG1 (a / artist :mod (a2 / amr-unknown)) :time (d / date :ARG1-of (s / same-01 :ARG2 (d2 / date :time-of (b2 / bear-02 :ARG1 (p / person :name (n / name :op1 \"Rachel\" :op2 \"Stevens\")))))))",
+        "ref_sparql": "PREFIX dbo: <http://dbpedia.org/ontology/> PREFIX dbr: <http://dbpedia.org/resource/> SELECT DISTINCT ?uri WHERE { ?uri a dbo:Artist . dbr:Rachel_Stevens dbo:birthDate ?birthdate . ?uri dbo:birthDate ?birthdate }",
+        "language": "es-ES",
+        "src": "qald9",
+        "beam_transition_scores": [
+            "|  5550 | SP       | -0.976 | 37.68%",
+            "|  5550 | SP       | -0.976 | 37.68%",
+            "|  5550 | SP       | -0.976 | 37.68%",
+            "|  5194 | AM       | -0.476 | 62.13%",
+            "|  5194 | AM       | -0.476 | 62.13%"
+        ],
+        "hypotheses": [
+            {
+                "pred_label": "SPARQL",
+                "pred_output": "PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX  wd:<http:wik:data/> SELECT DISTINCT ?uri WHERE { ?type wikibase:bestMatch ?x . ?xi wiktionary:BirthDate ?date .  }  UNION  {  VALUES ?startYear {1974}  ?endYear{2016} OFFSET 0 LIMIT 1 OBJECT: (y/year(?date) ?number) FILTER ( ?year = if(?number=1,?date,0) ) } } ORDER BY ASC(?uri)"
+            },
+            {
+                "pred_label": "SPARQL",
+                "pred_output": "PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX  wd:<http:wik:data/> SELECT DISTINCT ?uri WHERE { ?type wikibase:bestMatch ?x . ?xi wiktionary:BirthDate ?date .  }  UNION  {  VALUES ?startYear {1974}  ?endYear{2016} OFFSET 0 LIMIT 1 OBJECT: (y/year(?date) ?number) FILTER ( ?year = if(?number=1,?date,0) ) } }"
+            },
+            {
+                "pred_label": "SPARQL",
+                "pred_output": "PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX  wd:<http:wikedata/> SELECT DISTINCT ?uri WHERE { ?type wikibase:quantityAmount 1 . ?x wiktionary:BirthDate ?date ; wdk:P27 ?property .  ?y wikk:Rachel_Stevens_2 . FILTER(?x = ? y) . } ORDER BY DESC(?date) OFFSET 0 LIMIT 2"
+            },
+            {
+                "pred_label": "AMR",
+                "pred_output": "(b / bear-02 :ARG1 (p / person :name (n / name :op1 \"Rachel\") :mod (s / singer) :poss (y / you)) :time (a / amr-unknown)) (h / have-rel-role-91 : ARG0 (c2 / composer :quant (4))  :subevent-of (i2/ influence-85 :polarity (r / reward-13 :manner (g / good)))) :purpose (m / music-39 :medium (w / web)))"
+            },
+            {
+                "pred_label": "AMR",
+                "pred_output": "(b / bear-02 :ARG1 (p / person :name (n / name :op1 \"Rachel\") :mod (s / singer) :poss (y / you)) :time (a / amr-unknown)) (h / have-rel-role-91 : ARG0 (c2 / composer :quant (4))  :subevent-of (i2/ influence-85 :polarity (r / reward-13 :manner (g / good)))) :purpose (m / music-39 :medium (w / world)))"
+            }
+        ]
+    }
+]
