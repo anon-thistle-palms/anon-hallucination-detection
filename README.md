@@ -1,4 +1,4 @@
-# hallucination-detection
+# hallucination-detection using MASSIVE-AMR
 
 Data and script (OpenAI API) for the task of Knowledge Base Question Answering (KBQA) **semantic hallucination detection**, a novel task we describe in a recent paper (currently under review).
 
